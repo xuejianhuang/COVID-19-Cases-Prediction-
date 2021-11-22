@@ -1,0 +1,11 @@
+指定和远程库的某个分支关联：
+1.在github上创建一个仓库
+2.和远程库进行关联git remote add origin git@github.com:michaelliao/learngit.git
+3.关联分支 git branch --set-upstream-to=origin/remote_branch  local_branch
+4. 从远程pull内容并和本地分支合并 git pull --rebase 
+5.提交本地内容 git push origin local_branch
+
+默认分支关联（会在远程库创建一个新的分支和本地分支关联）：
+1.在github上创建一个仓库
+2.和远程库进行关联git remote add origin git@github.com:michaelliao/learngit.git
+3.git push -u origin master（加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令）
